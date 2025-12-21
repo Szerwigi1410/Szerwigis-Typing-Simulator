@@ -40,10 +40,10 @@ This game simulates the typing experience. It is written in C++
 
 ### Option 1 (less storage):
 1) Download the `main.cpp` `glCube.cpp` `glCube.h`
-2) On your UNIX-like system use the command from the `compiling-UNIX.sh` or just download the file and execute it
+2) On your UNIX-like system use the command from the `compiling-LINUX.sh`/`compiling-FreeBSD.sh` or just download the file and execute it
 3) run `./game`
 ### Option 2 (recommended)
 1) run `git clone https://github.com/Szerwigi1410/Szerwigis-Typing-Simulator`
 2) `cd Szerwigis-Typing-Simulator`
-3) `chmod +x compiling-UNIX.sh` and later `./compiling-UNIX.sh`
+3) `chmod +x compiling-LINUX.sh` or `chmod +x compiling-FreeBSD.sh` and later `./compiling-LINUX.sh` or `./compiling-FreeBSD.sh`
 4) run `./game`
