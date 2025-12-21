@@ -1,5 +1,8 @@
 # Szerwigis Typing Simulator
- a very cool game
+![Static Badge](https://img.shields.io/badge/written_in-C++-blue)
+![Static Badge](https://img.shields.io/badge/made_with-Geany_vscode_nano-yellow)
+
+a very cool game
 
 ---
 ## About the game
