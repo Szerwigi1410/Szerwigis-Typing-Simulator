@@ -67,6 +67,8 @@ string manual16{" - The lazy dog and the fox."};
 string manual17{"	system (2 options)"};
 string manual18{"		info - shows the system info"};
 string manual19{"		type - shows the system type (eg. GNU/Linux)"};
+string manual20{"	version"};
+string manual21{" - show the version of the typing simulator and some other info"};
 
 // Typing simulator version info
 string version0{"Typing Simulator Version 1.0.0"};
@@ -162,7 +164,9 @@ int main() {
 			cout << slostring(manual16) << endl << endl;
 			cout << "\033[1m" << slostring(manual17) << "\033[0m" << endl; //bold
 			cout << slostring(manual18) << endl;
-			cout << slostring(manual19) << endl;
+			cout << slostring(manual19) << endl << endl;
+			cout << "\033[1m" << slostring(manual20) << "\033[0m"; //bold
+			cout << slostring(manual21) << endl << endl;
 		}
 		else if (UsrInput == "X") {
 			cout << slostring(X11) << endl;
