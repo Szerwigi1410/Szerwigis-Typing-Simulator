@@ -14,7 +14,7 @@ This game simulates the typing experience. It is written in C++
 - ```CPU:``` Any single-core CPU cappable of running the OS
 - ```GPU:``` Not required unless using `cube`
 - ```RAM:``` 64 MB
-- ```Storage:``` ~60kB (just the compilied game, not the entire repo)
+- ```Storage:``` ~64kB (just the compilied game, not the entire repo)
 - ```Needed libs:``` iostream, vector, cstdio, cstdlib, thread, chrono, random
 - ```Compilier:``` C++11 capable
 - ```Other:``` Terminal supporting ANSI escape codes
@@ -42,8 +42,10 @@ This game simulates the typing experience. It is written in C++
 1) Download the `main.cpp` `glCube.cpp` `glCube.h`
 2) On your UNIX-like system use the command from the `compiling-LINUX.sh`/`compiling-FreeBSD.sh` or just download the file and execute it
 3) run `./game`
-### Option 2 (recommended)
+### Option 2
 1) run `git clone https://github.com/Szerwigi1410/Szerwigis-Typing-Simulator`
 2) `cd Szerwigis-Typing-Simulator`
 3) `chmod +x compiling-LINUX.sh` or `chmod +x compiling-FreeBSD.sh` and later `./compiling-LINUX.sh` or `./compiling-FreeBSD.sh`
 4) run `./game`
+### Option 3 (recommended)
+1) Just run the `install.sh` file
