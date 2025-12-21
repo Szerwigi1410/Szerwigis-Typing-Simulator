@@ -48,4 +48,5 @@ This game simulates the typing experience. It is written in C++
 3) `chmod +x compiling-LINUX.sh` or `chmod +x compiling-FreeBSD.sh` and later `./compiling-LINUX.sh` or `./compiling-FreeBSD.sh`
 4) run `./game`
 ### Option 3 (recommended)
-1) Just run the `install.sh` file
+1) run `git clone https://github.com/Szerwigi1410/Szerwigis-Typing-Simulator`
+2) Just run the `install.sh` file
