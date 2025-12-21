@@ -42,6 +42,16 @@ void systemType() {
 #endif
 }
 
+void justBeep() {
+#if defined(_WIN32)
+	Beep(440, 100);
+#elif defined(__FreeBSD__)
+	system("beep -F 440 -D 100");
+#else
+	cout << "No" << endl;
+#endif
+}
+
 void myBeepMusic() {
 #if defined(__linux__)
 	cout << "No beep for you" << endl;
@@ -77,8 +87,8 @@ void myBeepMusic() {
 #elif defined(_WIN32)
 	cout << "Beep for YOU!" << endl;
 	Beep(750, 100);
-    Beep(650, 100);
-    Beep(550, 100);
+    	Beep(650, 100);
+    	Beep(550, 100);
     Beep(450, 100);
     Beep(750, 100);
     Beep(650, 100);
@@ -316,6 +326,9 @@ int main() {
 		}
 		else if (UsrInput == "music") {
 			myBeepMusic();
+		}
+		else if (UsrInput == "beep" || UsrInput == "Beep") {
+			justBeep();
 		}
 	}
 end:
