@@ -86,9 +86,6 @@ echo "Installing '$source_file' to /usr/bin/szerwigis-typing-sim..."
 # Copy the chosen file to /usr/bin
 sudo cp "$source_file" /usr/bin/szerwigis-typing-sim
 
-# Make the new file executable
-#sudo chmod +x /usr/bin/ascii-enc
-
 # --- Step 5: Verify installation and provide success message ---
 
 if [ -f "/usr/bin/szerwigis-typing-sim" ]; then
