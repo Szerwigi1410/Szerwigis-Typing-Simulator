@@ -1,3 +1,4 @@
+#include <GL/freeglut.h>
 #include <GL/gl.h>
 #include <GL/glut.h>
 
@@ -7,7 +8,6 @@ void displayCube() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
     gluLookAt(0,0,5,0,0,0,0,1,0);
     glRotatef(angle,1.0f,1.0f,1.0f);
 
@@ -27,6 +27,12 @@ void reshapeCube(int width, int height) {
     gluPerspective(45.0f, (GLfloat)width/(GLfloat)height, 0.1f, 100.0f);
 }
 
+void keyboardCube(unsigned char key, int x, int y) {
+    if (key == 27 || key == 13) { // Esc or Enter
+        glutLeaveMainLoop();     // exit GLUT loop
+    }
+}
+
 void startCube() {
     int argc = 1;
     char* argv[1] = {(char*)"CubeApp"};
@@ -35,11 +41,15 @@ void startCube() {
     glutInitWindowSize(500, 500);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("GL CUBE++");
+
     glEnable(GL_DEPTH_TEST);
 
     glutDisplayFunc(displayCube);
     glutReshapeFunc(reshapeCube);
     glutIdleFunc(displayCube);
+    glutKeyboardFunc(keyboardCube);
 
-    glutMainLoop(); // Blocks until window closes
+    glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
+
+    glutMainLoop();
 }
