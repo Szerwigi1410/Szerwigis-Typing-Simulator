@@ -41,7 +41,7 @@ void startCube() {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(500, 500);
-    glutInitWindowPosition(100, 100);
+    glutInitWindowPosition(0, 0);
     glutCreateWindow("GL CUBE++");
 
     glEnable(GL_DEPTH_TEST);

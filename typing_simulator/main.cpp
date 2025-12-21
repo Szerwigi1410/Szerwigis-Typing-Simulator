@@ -18,6 +18,10 @@ void emptyScreen() {
 #endif
 }
 
+#if defined(_WIN32)
+#include <windows.h> // Must be at top-level
+#endif
+
 void systemInfo() {
 #ifdef WINDOWS
 	system("systeminfo");
@@ -43,6 +47,62 @@ void myBeepMusic() {
 	cout << "No beep for you" << endl;
 #elif defined(__FreeBSD__)
 	cout << "Beep for YOU!" << endl;
+	system("beep -F 750 -D 100");
+	system("beep -F 650 -D 100");
+	system("beep -F 550 -D 100");
+	system("beep -F 450 -D 100");
+	system("beep -F 750 -D 100");
+	system("beep -F 650 -D 100");
+	system("beep -F 550 -D 100");
+	system("beep -F 450 -D 100");
+	system("beep -F 650 -D 100");
+	system("beep -F 550 -D 100");
+	system("beep -F 450 -D 100");
+	system("beep -F 650 -D 100");
+	system("beep -F 450 -D 100");
+	system("beep -F 650 -D 100");
+	system("beep -F 450 -D 100");
+	system("beep -F 650 -D 100");
+	system("beep -F 550 -D 100");
+	system("beep -F 450 -D 100");
+	system("beep -F 440 -D 100");
+	system("beep -F 440 -D 100");
+	system("beep -F 440 -D 100");
+	system("beep -F 540 -D 100");
+	system("beep -F 640 -D 100");
+	system("beep -F 540 -D 100");
+	system("beep -F 440 -D 100");
+	system("beep -F 440 -D 100");
+	system("beep -F 440 -D 100");
+#elif defined(_WIN32)
+	cout << "Beep for YOU!" << endl;
+	Beep(750, 100);
+    Beep(650, 100);
+    Beep(550, 100);
+    Beep(450, 100);
+    Beep(750, 100);
+    Beep(650, 100);
+    Beep(550, 100);
+    Beep(450, 100);
+    Beep(650, 100);
+    Beep(550, 100);
+    Beep(450, 100);
+    Beep(650, 100);
+    Beep(450, 100);
+    Beep(650, 100);
+    Beep(450, 100);
+    Beep(650, 100);
+    Beep(550, 100);
+    Beep(450, 100);
+    Beep(440, 100);
+    Beep(440, 100);
+    Beep(440, 100);
+    Beep(540, 100);
+    Beep(640, 100);
+    Beep(540, 100);
+    Beep(440, 100);
+    Beep(440, 100);
+    Beep(440, 100);
 #else
 	cout << "Unsupported OS" << endl;
 #endif
@@ -83,6 +143,8 @@ string manual22{"		info - shows the system info"};
 string manual23{"		type - shows the system type (eg. GNU/Linux)"};
 string manual24{"	version"};
 string manual25{" - show the version of the typing simulator and some other info"};
+string manual26{"	music"};
+string manual27{" - plays some beepy music"};
 
 // Typing simulator version info
 string version0{"Typing Simulator Version 1.0.0"};
@@ -187,7 +249,9 @@ int main() {
 			cout << slostring(manual23) << endl << endl;
 			//endofsystemcommand
 			cout << "\033[1m" << slostring(manual24) << "\033[0m"; //bold
-			cout << slostring(manual25) << endl << endl;
+			cout << slostring(manual25) << endl;
+			cout << "\033[1m" << slostring(manual26) << "\033[0m"; //bold
+			cout << slostring(manual27) << endl << endl;
 		}
 		else if (UsrInput == "X") {
 			cout << slostring(X11) << endl;
