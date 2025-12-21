@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
-# This script interactively installs 'Text to ascii encoder'
-# from the current directory to /usr/bin. It prompts the user for choices.
-
 GREEN="\033[32m"
 RED="\033[31m"
 BLUE="\033[34m"
@@ -25,9 +20,6 @@ available_scripts=()
 if [ -f "game" ]; then
     available_scripts+=("game")
 fi
-#if [ -f "cpuinfo_beta.sh" ]; then
-#    available_scripts+=("cpuinfo_beta.sh")
-#fi
 
 # Exit if no source files are found
 if [ ${#available_scripts[@]} -eq 0 ]; then
