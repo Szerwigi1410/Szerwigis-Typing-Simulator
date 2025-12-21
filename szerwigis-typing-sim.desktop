@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0.0
+Name=Szerwigi's Typing Simulator
+Exec=/usr/bin/szerwigis-typing-sim
+Type=Application
+Terminal=true
+Categories=Game;
