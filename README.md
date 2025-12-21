@@ -27,7 +27,7 @@ This game simulates the typing experience. It is written in C++
 - ```GPU:``` Any GPU with OpenGL 2.1 (maybe lower) support **OR** software renderer (Mesa)
 - ```RAM:``` 128 MB
 - ```Storage:``` ~500kB (the entire repo + compilied game)
-- ```Needed libs: ``` iostream, vector, cstdio, cstdlib, thread, chrono, random, **freeglut.h**, **gl.h**, **glut.h**
+- ```Needed libs:``` iostream, vector, cstdio, cstdlib, thread, chrono, random, **freeglut.h**, **gl.h**, **glut.h**
 - ```Compilier:``` Clang, GCC, MSVC
 - ```Other:``` an X11/Wayland DE or a WM (Linux/FreeBSD)
 
