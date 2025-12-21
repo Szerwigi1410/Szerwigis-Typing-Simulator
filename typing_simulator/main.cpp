@@ -38,6 +38,16 @@ void systemType() {
 #endif
 }
 
+void myBeepMusic() {
+#if defined(__linux__)
+	cout << "No beep for you" << endl;
+#elif defined(__FreeBSD__)
+	cout << "Beep for YOU!" << endl;
+#else
+	cout << "Unsupported OS" << endl;
+#endif
+}
+
 // Global values ====================
 int typSpeed;
 string prawda{"is goated"};
@@ -53,22 +63,26 @@ string manual2{" - clear the screen"};
 string manual3{"	C++"};
 string manual4{" - tells the truth"};
 string manual5{"	cube"};
-string manual6{" - creates a window showing a 3D rotating cube using OpenGL. Can be closed by pressind the enter or esc key"};
-string manual7{"	exit"};
-string manual8{" - exit the game"};
-string manual9{"	manual / help"};
-string manual10{" - see this screen"};
-string manual11{"	random"};
-string manual12{" - a random number between -128 and 128"};
-string manual13{"	sampletext0"};
-string manual14{" - Lorem ipsum blah blah blah"};
-string manual15{"	sampletext1"};
-string manual16{" - The lazy dog and the fox."};
-string manual17{"	system (2 options)"};
-string manual18{"		info - shows the system info"};
-string manual19{"		type - shows the system type (eg. GNU/Linux)"};
-string manual20{"	version"};
-string manual21{" - show the version of the typing simulator and some other info"};
+string manual6{" - creates a window showing a 3D rotating cube using OpenGL."};// Can be closed by pressind the enter or esc key
+string manual7{"		red - creates a red cube"};
+string manual8{"		green - creates a green cube"};
+string manual9{"		blue - creates a blue cube"};
+string manual10{"		custom - you decide the colors"};
+string manual11{"	exit"};
+string manual12{" - exit the game"};
+string manual13{"	manual / help"};
+string manual14{" - see this screen"};
+string manual15{"	random"};
+string manual16{" - a random number between -128 and 128"};
+string manual17{"	sampletext0"};
+string manual18{" - Lorem ipsum blah blah blah"};
+string manual19{"	sampletext1"};
+string manual20{" - The lazy dog and the fox."};
+string manual21{"	system (2 options)"};
+string manual22{"		info - shows the system info"};
+string manual23{"		type - shows the system type (eg. GNU/Linux)"};
+string manual24{"	version"};
+string manual25{" - show the version of the typing simulator and some other info"};
 
 // Typing simulator version info
 string version0{"Typing Simulator Version 1.0.0"};
@@ -132,8 +146,9 @@ int main() {
 	for (;;) { // The typing loop
 		string UsrInput;
 		//cin >> UsrInput;
+		cout << "In: ";
 		std::getline(cin, UsrInput);
-		cout << "\033[1m" << "User: " << "\033[0m" << slostring(UsrInput) << endl;
+		cout << "\033[1m" << "Out: " << "\033[0m" << slostring(UsrInput) << endl;
 
 		if (UsrInput == "exit") {
 			goto end;
@@ -149,24 +164,30 @@ int main() {
 			cout << "\033[1m" << slostring(manual1) << "\033[0m"; //bold
 			cout << slostring(manual2) << endl;
 			cout << "\033[1m" << slostring(manual3) << "\033[0m"; // bold
-			cout << slostring(manual4) << endl;
+			cout << slostring(manual4) << endl << endl;
 			cout << "\033[1m" << slostring(manual5) << "\033[0m"; //bold
 			cout << slostring(manual6) << endl;
-			cout << "\033[1m" << slostring(manual7) << "\033[0m"; //bold
+			cout << slostring(manual7) << endl; 
 			cout << slostring(manual8) << endl;
-			cout << "\033[1m" << slostring(manual9) << "\033[0m"; //bold
-			cout << slostring(manual10) << endl;
+			cout << slostring(manual9) << endl;
+			cout << slostring(manual10) << endl << endl;
 			cout << "\033[1m" << slostring(manual11) << "\033[0m"; //bold
 			cout << slostring(manual12) << endl;
 			cout << "\033[1m" << slostring(manual13) << "\033[0m"; //bold
 			cout << slostring(manual14) << endl;
 			cout << "\033[1m" << slostring(manual15) << "\033[0m"; //bold
-			cout << slostring(manual16) << endl << endl;
-			cout << "\033[1m" << slostring(manual17) << "\033[0m" << endl; //bold
+			cout << slostring(manual16) << endl;
+			cout << "\033[1m" << slostring(manual17) << "\033[0m"; //bold
 			cout << slostring(manual18) << endl;
-			cout << slostring(manual19) << endl << endl;
-			cout << "\033[1m" << slostring(manual20) << "\033[0m"; //bold
-			cout << slostring(manual21) << endl << endl;
+			cout << "\033[1m" << slostring(manual19) << "\033[0m"; //bold
+			cout << slostring(manual20) << endl << endl;
+			//systemcoommand
+			cout << "\033[1m" << slostring(manual21) << "\033[0m" << endl; //bold
+			cout << slostring(manual22) << endl;
+			cout << slostring(manual23) << endl << endl;
+			//endofsystemcommand
+			cout << "\033[1m" << slostring(manual24) << "\033[0m"; //bold
+			cout << slostring(manual25) << endl << endl;
 		}
 		else if (UsrInput == "X") {
 			cout << slostring(X11) << endl;
@@ -202,8 +223,35 @@ int main() {
 			cout << slostring(version6) << endl;
 			//cout << "\033[1m" << slostring(version7) << "\033[0m"; //bold
 		}
-		else if (UsrInput == "cube") {
+		else if (UsrInput == "cube" || UsrInput == "cube green") {
+			Cred = 0.0f;
+			Cgreen = 1.0f;
+			Cblue = 0.0f;
 			startCube();
+		}
+		else if (UsrInput == "cube blue") {
+			Cred = 0.0f;
+			Cgreen = 0.0f;
+			Cblue = 1.0f;
+			startCube();
+		}
+		else if (UsrInput == "cube red") {
+			Cred = 1.0f;
+			Cgreen = 0.0f;
+			Cblue = 0.0f;
+			startCube();
+		}
+		else if (UsrInput == "cube custom") {
+			cout << "Red (from 0.0 to 1.0): ";
+			cin >> Cred;
+			cout << "Green (from 0.0 to 1.0): ";
+			cin >> Cgreen;
+			cout << "Blue (from 0.0 to 1.0): ";
+			cin >> Cblue;
+			startCube();
+		}
+		else if (UsrInput == "music") {
+			myBeepMusic();
 		}
 	}
 end:

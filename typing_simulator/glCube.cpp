@@ -4,6 +4,8 @@
 
 GLfloat angle = 0.0f;
 
+float Cred, Cgreen, Cblue;
+
 void displayCube() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
@@ -11,7 +13,7 @@ void displayCube() {
     gluLookAt(0,0,5,0,0,0,0,1,0);
     glRotatef(angle,1.0f,1.0f,1.0f);
 
-    glColor3f(0.0f, 0.5f, 1.0f);
+    glColor3f(Cred, Cgreen, Cblue); //for green 0.0 1.0 0.0
     glutWireCube(1.0f);
 
     glutSwapBuffers();
