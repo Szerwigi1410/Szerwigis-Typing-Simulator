@@ -7,12 +7,12 @@ This game simulates the typing experience. It is written in C++
 
 ---
 ## Minimum system requirements
-- ```OS: ``` Any modern or legacy OS with terminal/console support
+- ```OS:``` Any modern or legacy OS with terminal/console support
 - ```CPU:``` Any single-core CPU cappable of running the OS
 - ```GPU:``` Not required unless using `cube`
 - ```RAM:``` 64 MB
 - ```Storage:``` ~60kB (just the compilied game, not the entire repo)
-- ```Needed libs: ``` iostream, vector, cstdio, cstdlib, thread, chrono, random
+- ```Needed libs:``` iostream, vector, cstdio, cstdlib, thread, chrono, random
 - ```Compilier:``` C++11 capable
 - ```Other:``` Terminal supporting ANSI escape codes
 ### Note:
