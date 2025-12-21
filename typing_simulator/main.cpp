@@ -52,19 +52,21 @@ string manual1{"	clear / cls"};
 string manual2{" - clear the screen"};
 string manual3{"	C++"};
 string manual4{" - tells the truth"};
-string manual5{"	exit"};
-string manual6{" - exit the game"};
-string manual7{"	manual / help"};
-string manual8{" - see this screen"};
-string manual9{"	random"};
-string manual10{" - a random number between -128 and 128"};
-string manual11{"	sampletext0"};
-string manual12{" - Lorem ipsum blah blah blah"};
-string manual13{"	sampletext1"};
-string manual14{" - The lazy dog and the fox."};
-string manual15{"	system (2 options)"};
-string manual16{"		info - shows the system info"};
-string manual17{"		type - shows the system type (eg. GNU/Linux)"};
+string manual5{"	cube"};
+string manual6{" - creates a window showing a 3D rotating cube using OpenGL. Can be closed by pressind the enter or esc key"};
+string manual7{"	exit"};
+string manual8{" - exit the game"};
+string manual9{"	manual / help"};
+string manual10{" - see this screen"};
+string manual11{"	random"};
+string manual12{" - a random number between -128 and 128"};
+string manual13{"	sampletext0"};
+string manual14{" - Lorem ipsum blah blah blah"};
+string manual15{"	sampletext1"};
+string manual16{" - The lazy dog and the fox."};
+string manual17{"	system (2 options)"};
+string manual18{"		info - shows the system info"};
+string manual19{"		type - shows the system type (eg. GNU/Linux)"};
 
 // Typing simulator version info
 string version0{"Typing Simulator Version 1.0.0"};
@@ -155,10 +157,12 @@ int main() {
 			cout << "\033[1m" << slostring(manual11) << "\033[0m"; //bold
 			cout << slostring(manual12) << endl;
 			cout << "\033[1m" << slostring(manual13) << "\033[0m"; //bold
-			cout << slostring(manual14) << endl << endl;
-			cout << "\033[1m" << slostring(manual15) << "\033[0m" << endl; //bold
-			cout << slostring(manual16) << endl;
-			cout << slostring(manual17) << endl;
+			cout << slostring(manual14) << endl;
+			cout << "\033[1m" << slostring(manual15) << "\033[0m"; //bold
+			cout << slostring(manual16) << endl << endl;
+			cout << "\033[1m" << slostring(manual17) << "\033[0m" << endl; //bold
+			cout << slostring(manual18) << endl;
+			cout << slostring(manual19) << endl;
 		}
 		else if (UsrInput == "X") {
 			cout << slostring(X11) << endl;
