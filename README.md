@@ -14,7 +14,7 @@ This game simulates the typing experience. It is written in C++
 - ```CPU:``` Any single-core CPU cappable of running the OS
 - ```GPU:``` Not required unless using `cube`
 - ```RAM:``` 64 MB
-- ```Storage:``` ~65kB (just the compilied game, not the entire repo)
+- ```Storage:``` ~70kB (just the compilied game, not the entire repo)
 - ```Needed libs:``` iostream, vector, cstdio, cstdlib, thread, chrono, random
 - ```Compilier:``` C++11 capable
 - ```Other:``` Terminal supporting ANSI escape codes
@@ -29,7 +29,7 @@ This game simulates the typing experience. It is written in C++
 - ```CPU:``` Pentium 4 or better
 - ```GPU:``` Any GPU with OpenGL 2.1 (maybe lower) support **OR** software renderer (Mesa)
 - ```RAM:``` 128 MB
-- ```Storage:``` ~1600kB (the entire repo + compilied game)
+- ```Storage:``` ~2500kB (the entire repo + compilied game)
 - ```Needed libs:``` iostream, vector, cstdio, cstdlib, thread, chrono, random, **freeglut.h**, **gl.h**, **glut.h**
 - ```Compilier:``` Clang, GCC, MSVC
 - ```Other:``` an X11/Wayland DE or a WM (Linux/FreeBSD)

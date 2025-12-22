@@ -155,6 +155,8 @@ string manual24{"	version"};
 string manual25{" - show the version of the typing simulator and some other info"};
 string manual26{"	music"};
 string manual27{" - plays some beepy music"};
+string manual28{"	logo"};
+string manual29{" - shows the STS's logo using braile characters"};
 
 // Typing simulator version info
 string version0{"Typing Simulator Version 1.0.0"};
@@ -179,6 +181,23 @@ string systemCommandError005{" to get gelp"};
 random_device rd;          // seed source
 mt19937 gen(rd());         // Mersenne Twister RNG
 uniform_int_distribution<int> dist(-128, 128);
+
+// ascii logo
+string strlogo00{"⠀⠀⡀⢤⠤⠤⡤⠤⠤⠤⢤⡤⠤⡤⣤⡤⡤⠤⡤⠤⢤⠤⠤⢤⠤⣤⠤⢤⠤⠤⢤⠤⢤⠤⠤⣤⣤⠤⡤⢤⡤⠤⠤⠤⠤⡤⠄⠀⠀⠀"};
+string strlogo01{"⡀⠔⠊⠀⢀⢎⣃⣠⣅⣉⡀⢀⠔⢱⡀⠂⢐⠁⣀⣴⣉⣄⣌⣀⣁⣀⣠⣊⣂⣔⣀⣊⣀⣠⠎⠡⠠⠁⠈⢀⣀⣔⣵⣀⡊⠐⠁⣨⡳⡄"};
+string strlogo02{"⠈⡔⣐⢔⣵⣿⡿⡻⡻⠻⠻⢿⣶⣿⣇⢠⢊⠂⣿⣿⣿⢿⢿⠿⢻⣿⣿⣿⠿⡿⡿⠿⣿⣿⡆⠠⡡⢐⣽⣾⠿⠛⠫⢛⢻⢿⣾⣾⣇⢹"};
+string strlogo03{"⠀⢠⣲⣿⣿⡏⢨⠀⠡⠄⠠⠔⣻⣿⡇⠐⡌⢸⢿⢋⠀⡅⠀⠤⣹⣿⣿⡟⠤⠀⢠⠀⠬⣿⡇⢪⣈⣿⣿⡯⠔⡠⠪⠄⠘⡄⠹⣿⣧⢸"};
+string strlogo04{"⠀⠀⣿⣿⣿⣦⡆⠈⡈⢤⠤⠂⢁⣽⡏⡀⢠⠬⠚⠀⣴⠀⢡⠡⢿⣿⣿⣯⡅⢀⠈⡤⠔⠉⢁⡆⢛⣿⣿⣧⡂⠁⢬⠀⡀⢡⠤⢿⣇⢸"};
+string strlogo05{"⠀⠀⢙⣿⣿⣿⣿⣮⣄⡀⣀⡰⠋⠈⠀⠁⣠⣀⣀⠎⠀⢂⢡⢀⣿⣿⣿⡧⠁⠈⢀⣅⣀⡰⠁⠐⡈⢽⣿⣿⣿⣮⣌⡀⠁⢨⣀⣀⠎⢸"};
+string strlogo06{"⠀⡋⠈⠀⠙⢿⣿⣿⣿⣿⣶⣤⡀⢈⠔⢘⢱⠁⠀⡀⢐⠁⠰⠁⣽⣿⣿⡷⡢⠂⡋⡌⠀⢀⠀⡊⠀⠌⠙⠻⢿⣿⣿⣿⣿⣥⣁⠀⠀⢸"};
+string strlogo07{"⠀⠸⠉⠀⡁⠎⡠⠉⠻⣿⣿⣿⣿⣷⣄⠀⠎⠁⢈⠰⢁⠎⠄⡋⣿⣿⣿⡯⡂⠁⠰⠉⠀⡁⠎⡰⠁⢈⠉⠀⡈⠍⢻⢿⣿⣿⣿⣿⣴⢸"};
+string strlogo08{"⠀⠀⣶⡈⠀⡔⠆⢀⠂⠒⠈⠻⣿⣿⣿⣆⠡⠂⠁⣠⠲⡀⡐⠐⣹⣿⣿⣟⠄⠠⠈⠔⠈⢀⡔⢃⠠⣂⠑⠈⠁⡠⠳⠀⠌⠻⣿⣿⣿⣿"};
+string strlogo09{"⠀⡠⣹⣿⠊⠀⡠⢂⢢⢦⠀⠘⠩⣿⣿⣯⠜⡄⠘⠁⢀⠐⡐⡴⢽⣿⣿⣏⡈⠀⡤⢣⠀⠋⠀⢀⠀⣿⣤⠀⠘⠀⢀⠅⢀⠔⡴⣿⣿⣿"};
+string strlogo10{"⠀⢅⢿⣿⣷⣄⢐⠁⢃⡀⣀⡠⣹⣿⣿⠩⡘⢀⣀⠀⠡⡊⠘⣀⢸⣿⣿⣯⣐⠀⢅⠂⣀⡀⠀⢔⠁⣿⣿⣄⠠⢀⢅⡊⠨⡠⣲⣿⣿⢻"};
+string strlogo11{"⠂⠀⢸⡿⠛⠻⡿⣶⣶⣶⣾⡿⠿⡛⠁⠀⠃⣀⠔⠈⠠⠑⠒⢷⣿⡿⠿⢿⡶⠶⠜⢀⡠⠆⠁⡌⠨⡿⡛⣻⠿⢷⣶⣶⣾⣾⣿⠛⣹⠏"};
+string strlogo12{"⠀⠀⠓⠢⠤⠮⠥⠴⠥⠤⠤⠤⠶⠼⠤⠧⠬⠤⠤⠴⠭⠤⠮⠤⠤⠤⠴⠦⠦⠼⠤⠧⠤⠤⠮⠥⠴⠥⠬⠤⠤⠶⠼⠤⠦⠴⠖⠉⠁⠀"};
+//string strlogo13{"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"};
+string strlogo13{"Szerwigi's typing simulator"};
 
 //cool typing effect ===================
 class slostring
@@ -261,7 +280,9 @@ int main() {
 			cout << "\033[1m" << slostring(manual24) << "\033[0m"; //bold
 			cout << slostring(manual25) << endl;
 			cout << "\033[1m" << slostring(manual26) << "\033[0m"; //bold
-			cout << slostring(manual27) << endl << endl;
+			cout << slostring(manual27) << endl;
+			cout << "\033[1m" << slostring(manual28) << "\033[0m"; //bold
+			cout << slostring(manual29) << endl << endl;
 		}
 		else if (UsrInput == "X") {
 			cout << slostring(X11) << endl;
@@ -329,6 +350,25 @@ int main() {
 		}
 		else if (UsrInput == "beep" || UsrInput == "Beep") {
 			justBeep();
+		}
+		else if (UsrInput == "brokefetch" || UsrInput == "neofetch") {
+			system("bash brokefetch");
+		}
+		else if (UsrInput == "logo") {
+			cout << slostring(strlogo00) << endl;
+			cout << slostring(strlogo01) << endl;
+			cout << slostring(strlogo02) << endl;
+			cout << slostring(strlogo03) << endl;
+			cout << slostring(strlogo04) << endl;
+			cout << slostring(strlogo05) << endl;
+			cout << slostring(strlogo06) << endl;
+			cout << slostring(strlogo07) << endl;
+			cout << slostring(strlogo08) << endl;
+			cout << slostring(strlogo09) << endl;
+			cout << slostring(strlogo10) << endl;
+			cout << slostring(strlogo11) << endl;
+			cout << slostring(strlogo12) << endl;
+			cout << slostring(strlogo13) << endl;
 		}
 	}
 end:
