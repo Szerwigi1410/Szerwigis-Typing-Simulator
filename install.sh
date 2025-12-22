@@ -77,6 +77,7 @@ echo "Installing '$source_file' to /usr/bin/szerwigis-typing-sim..."
 
 # Copy the chosen file to /usr/bin
 sudo cp "$source_file" /usr/bin/szerwigis-typing-sim
+sudo cp STSLogo.png /usr/share/icons
 sudo cp szerwigis-typing-sim.desktop /usr/share/applications/
 
 # --- Step 5: Verify installation and provide success message ---

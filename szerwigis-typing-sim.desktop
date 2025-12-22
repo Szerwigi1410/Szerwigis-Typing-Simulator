@@ -1,7 +1,9 @@
 [Desktop Entry]
 Version=1.0.0
 Name=Szerwigi's Typing Simulator
+Icon=/usr/share/icons/STSLogo.png
 Exec=/usr/bin/szerwigis-typing-sim
 Type=Application
 Terminal=true
 Categories=Game;
+Keywords=typing;game;keyboard;brokefetch;sts;

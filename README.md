@@ -29,7 +29,7 @@ This game simulates the typing experience. It is written in C++
 - ```CPU:``` Pentium 4 or better
 - ```GPU:``` Any GPU with OpenGL 2.1 (maybe lower) support **OR** software renderer (Mesa)
 - ```RAM:``` 128 MB
-- ```Storage:``` ~600kB (the entire repo + compilied game)
+- ```Storage:``` ~1600kB (the entire repo + compilied game)
 - ```Needed libs:``` iostream, vector, cstdio, cstdlib, thread, chrono, random, **freeglut.h**, **gl.h**, **glut.h**
 - ```Compilier:``` Clang, GCC, MSVC
 - ```Other:``` an X11/Wayland DE or a WM (Linux/FreeBSD)
@@ -50,3 +50,7 @@ This game simulates the typing experience. It is written in C++
 ### Option 3 (recommended)
 1) run `git clone https://github.com/Szerwigi1410/Szerwigis-Typing-Simulator`
 2) Just run the `install.sh` file
+
+#### Note:
+
+- If you use the 3rd option you will be able to launch STS from your application menu
