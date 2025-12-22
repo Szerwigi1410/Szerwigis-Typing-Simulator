@@ -12,6 +12,38 @@ RESET="\033[0m"
 BLACK="\033[30m"
 GRAY="\033[90m"
 
+clear
+
+# Check if OpenGL headers are present
+if [ -f /usr/include/GL/gl.h ]; then
+    echo -e "[${GREEN} OK ${RESET}] GL header present"
+else
+    echo -e "${BOLD}${YELLOW}WARNING:${RESET} GL header is ${BOLD}not${RESET} present"
+    echo -e "Would you like to install it automatically? (y/n): "
+
+    read glYN
+    case "$glYN" in
+        'y') sudo apt update && sudo apt install -y build-essential libgl1-mesa-dev libglu1-mesa-dev && sudo pacman -Syu --needed mesa mesa-demos && sudo dnf install -y mesa-libGL-devel mesa-libGLU-devel && sudo zypper install -y Mesa-devel Mesa-libGLU-devel && sudo apk add mesa-dev && sudo pkg install -y mesa-libs && sudo emerge --ask media-libs/mesa && sudo slackpkg install mesa && sudo xbps-install -Sy mesa mesa-devel && sudo eopkg install mesa libGLU-devel;;
+        *) exit;;
+    esac
+
+fi
+
+# Check if GLUT headers are present
+if [ -f /usr/include/GL/glut.h ] || [ -f /usr/include/GL/freeglut.h ]; then
+    echo -e "[${GREEN} OK ${RESET}] GLUT/FreeGLUT header present"
+else
+    echo -e "${BOLD}${YELLOW}WARNING:${RESET} GLUT/FreeGLUT headers are ${BOLD}not${RESET} present"
+    echo -e "Would you like to install them automatically? (y/n): "
+
+    read glutYN
+    case "$glutYN" in
+        'y') sudo apt update && sudo apt install -y freeglut3-dev && sudo pacman -Syu --needed freeglut && sudo dnf install -y freeglut-devel && sudo zypper install -y freeglut-devel && sudo apk add freeglut-dev && sudo pkg install -y freeglut && sudo emerge --ask media-libs/freeglut && sudo slackpkg install freeglut && sudo xbps-install -Sy freeglut freeglut-devel && sudo eopkg install freeglut-devel;;
+        *) exit;;
+    esac
+fi
+
+#compile
 bash compiling-FreeBSD.sh
 
 # --- Step 1: Identify available source files ---
