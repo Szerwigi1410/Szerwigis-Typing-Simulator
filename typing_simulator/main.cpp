@@ -163,7 +163,7 @@ string manual32{"	beep"};
 string manual33{" - plays a beep"};
 
 // Typing simulator version info
-string version0{"Typing Simulator Version 1.0.0"};
+string version0{"Typing Simulator Version 1.0.1"};
 string version1{"About us:"};
 string version2{"	- Created by dedicated typing enthusiasts"};
 string version3{"Our mission:"};

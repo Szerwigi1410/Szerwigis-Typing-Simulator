@@ -45,6 +45,7 @@ fi
 
 #compile
 bash compiling-FreeBSD.sh
+echo -e "${BOLD}${GREEN}Ignore the warnings. Everything is fine${RESET}"
 
 # --- Step 1: Identify available source files ---
 
