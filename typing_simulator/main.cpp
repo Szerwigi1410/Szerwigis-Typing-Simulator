@@ -217,6 +217,28 @@ string strlogo11a{"⣿⣶⣿⠀⠀⠘⢿⣿⣿⣿⣾⣷⣿⣿⡿⠁⠀⠀⢀⣾�
 string strlogo12a{"⢿⣯⣼⠀⠀⠀⠀⠉⠛⠻⠧⠾⠟⠋⠁⠀⠀⣰⣿⣵⣿⣿⣿⣟⣿⣿⠿⠿⠜⠁⠀⠀⠀⠈⠿⠿⣯⣾⣿⣿⣟⣿⣿⣿⠀⠀⠀⠀⠉⠛⠻⠿⠿⠟⠛⠁⠀⠀⡀⠀"};
 string strlogo13a{"⠀⠙⠯⣄⣠⣶⣶⣤⣤⣀⣀⣀⣀⣀⣤⣶⣾⣿⣿⣿⣿⣿⣾⣿⣿⣿⣶⣠⣄⣠⣤⣤⣤⣀⣤⣤⣼⣿⣿⣿⣿⣿⣿⣿⣄⣠⣮⣤⣤⣤⢀⢀⣀⢀⣀⣠⠤⠊⠀⠀"};
 
+//arch ascii
+string ascii00{"                   -\`                     "};
+string ascii01{"                  .o+\`                    "};
+string ascii02{"                 \`ooo/                    "};
+string ascii03{"                \`+oooo:                   "};
+string ascii04{"               \`+oooooo:                  "};
+string ascii05{"               -+oooooo+:                 "};
+string ascii06{"             \`/:-:++oooo+:                "};
+string ascii07{"            \`/++++/+++++++:               "};
+string ascii08{"           \`/++++++++++++++:              "};
+string ascii09{"          \`/+++ooooooooooooo/\`            "};
+string ascii10{"         ./ooosssso++osssssso+\`           "};
+string ascii11{"        .oossssso-\`\`\`\`/ossssss+\`          "};
+string ascii12{"       -osssssso.      :ssssssso.         "};
+string ascii13{"      :osssssss/        osssso+++.        "};
+string ascii14{"     /ossssssss/        +ssssooo/-        "};
+string ascii15{"   \`/ossssso+/:-        -:/+osssso+-      "};
+string ascii16{"  \`+sso+:-\`                 \`.-/+oso:    "};
+string ascii17{" \`++:.                           \`-/+/   "};
+string ascii18{" .\`                                 \`/   "};
+string ascii19{"                                        "};
+
 //cool typing effect ===================
 class slostring
 {
@@ -407,6 +429,28 @@ int main() {
 			cout << slostring(strlogo11a) << endl;
 			cout << slostring(strlogo12a) << endl;
 			cout << slostring(strlogo13a) << endl;
+		}
+		else if (UsrInput == "I use arch btw") {
+			cout << "\033[36m" << slostring(ascii00) << endl;
+			cout << "\033[36m" <<  slostring(ascii01) << endl;
+			cout << "\033[36m" <<  slostring(ascii02) << endl;
+			cout << "\033[36m" <<  slostring(ascii03) << endl;
+			cout << "\033[36m" <<  slostring(ascii04) << endl;
+			cout << "\033[36m" <<  slostring(ascii05) << endl;
+			cout << "\033[36m" <<  slostring(ascii06) << endl;
+			cout << "\033[36m" <<  slostring(ascii07) << endl;
+			cout << "\033[36m" <<  slostring(ascii08) << endl;
+			cout << "\033[36m" <<  slostring(ascii09) << endl;
+			cout << "\033[36m" <<  slostring(ascii10) << endl;
+			cout << "\033[36m" <<  slostring(ascii11) << endl;
+			cout << "\033[36m" <<  slostring(ascii12) << endl;
+			cout << "\033[36m" <<  slostring(ascii13) << endl;
+			cout << "\033[36m" <<  slostring(ascii14) << endl;
+			cout << "\033[36m" <<  slostring(ascii15) << endl;
+			cout << "\033[36m" <<  slostring(ascii16) << endl;
+			cout << "\033[36m" <<  slostring(ascii17) << endl;
+			cout << "\033[36m" <<  slostring(ascii18) << endl;
+			cout << "\033[36m" <<  slostring(ascii19) << endl << "\033[0m";
 		}
 	}
 end:
