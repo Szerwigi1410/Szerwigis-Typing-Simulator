@@ -5,6 +5,8 @@
 #include <thread>
 #include <chrono>
 #include <random>
+#include <fstream>
+#include <filesystem>
 //my includes
 #include "glCube.h"
 using namespace std;
@@ -161,6 +163,12 @@ string manual30{"		0 - bigger braile logo"};
 string manual31{"		1 - braile logo"};
 string manual32{"	beep"};
 string manual33{" - plays a beep"};
+string manual34{"save"};
+string manual35{" - save your text"};
+string manual36{"load"};
+string manual37{" - load your saved text"};
+string manual38{"clear saved"};
+string manual39{" - clear saved text"};
 
 // Typing simulator version info
 string version0{"Typing Simulator Version 1.0.1"};
@@ -274,6 +282,8 @@ int main() {
 	string msgWelc{"Welcome to typing simulator!"};
 	cout << slostring(msgWelc) << endl;
 
+	string tosave;
+
 	for (;;) { // The typing loop
 		string UsrInput;
 		//cin >> UsrInput;
@@ -289,6 +299,29 @@ int main() {
 		}
 		else if (UsrInput == "clear" || UsrInput == "cls") {
 			emptyScreen();
+		}
+		else if (UsrInput == "save") {
+			//the code to save text ==============================
+			cout << "SAVE: ";
+			std::getline(cin, tosave);
+			ofstream output("typed.txt");
+			output << tosave;
+			output.close();
+		}
+		else if (UsrInput == "load") {
+			ifstream input("typed.txt");
+			if(input.fail()) {
+				cout << "Coudn't read saved data" << endl;
+			}
+			else {
+				std::getline(input, tosave);
+				cout << slostring(tosave) << endl;
+			}
+		}
+		else if (UsrInput == "clear saved") {
+			ofstream output("typed.txt");
+			output << "";
+			output.close();
 		}
 		else if (UsrInput == "manual" || UsrInput == "help") {
 			cout << "\033[1m" << slostring(manual0) << "\033[0m" << endl << endl;
@@ -327,6 +360,12 @@ int main() {
 			cout << slostring(manual31) << endl << endl;
 			cout << "\033[1m" << slostring(manual32) << "\033[0m";
 			cout << slostring(manual33) << endl << endl; 
+			cout << "\033[1m" << slostring(manual34) << "\033[0m";
+			cout << slostring(manual35) << endl << endl; 
+			cout << "\033[1m" << slostring(manual36) << "\033[0m";
+			cout << slostring(manual37) << endl << endl; 
+			cout << "\033[1m" << slostring(manual38) << "\033[0m";
+			cout << slostring(manual39) << endl << endl; 
 		}
 		else if (UsrInput == "X") {
 			cout << slostring(X11) << endl;
