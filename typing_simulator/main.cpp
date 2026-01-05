@@ -282,7 +282,9 @@ int main() {
 	string msgWelc{"Welcome to typing simulator!"};
 	cout << slostring(msgWelc) << endl;
 
+	system("mkdir ~/.local/share/Szerwigis-Typing-Simulator/");
 	string tosave;
+	string typPath = std::string(getenv("HOME")) + "/.local/share/Szerwigis-Typing-Simulator/typed.txt";
 
 	for (;;) { // The typing loop
 		string UsrInput;
@@ -304,12 +306,12 @@ int main() {
 			//the code to save text ==============================
 			cout << "SAVE: ";
 			std::getline(cin, tosave);
-			ofstream output("typed.txt");
+			ofstream output(typPath);
 			output << tosave;
 			output.close();
 		}
 		else if (UsrInput == "load") {
-			ifstream input("typed.txt");
+			ifstream input(typPath);
 			if(input.fail()) {
 				cout << "Coudn't read saved data" << endl;
 			}
